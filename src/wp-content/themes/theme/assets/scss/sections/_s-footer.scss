@@ -1,0 +1,7 @@
+.s-footer {
+  @include section();
+
+  &__container {
+    @include container();
+  }
+}

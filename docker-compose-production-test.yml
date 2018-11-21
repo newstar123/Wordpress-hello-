@@ -1,0 +1,25 @@
+version: "3"
+services:
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    env_file:
+        - ./.env
+
+  mysql:
+    image: mariadb:10.3.4
+    ports:
+        - 3306:3306
+    volumes:
+        - mariadb:/var/lib/mysql
+    env_file:
+        - ./.env
+
+  redis:
+    image: redis:3.2.11
+
+volumes:
+  mariadb:

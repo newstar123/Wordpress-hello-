@@ -1,0 +1,12 @@
+.s-base {
+  @include section();
+
+  &__container {
+    @include container();
+  }
+
+  // only for demo purposes :P
+  &--busta-rhymes {
+    background: $brand-color;
+  }
+}
